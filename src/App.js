@@ -1,5 +1,9 @@
 import "./App.css";
 import logo from "./logo.png";
+import { makeServer } from "./server";
+
+// Call make Server
+makeServer();
 
 function App() {
   return (
