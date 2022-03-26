@@ -1,0 +1,6 @@
+.snackbar-class{
+    display: block;
+    z-index: 98;
+    color: var(--whitepeach-color);
+    background-color: transparent;
+}

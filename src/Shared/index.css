@@ -1,0 +1,10 @@
+@import url('./Alert/Alert.css');
+@import url('./CategoryCard/CategoryCard.css');
+@import url('Corousel/Corousel.css');
+@import url('./Footer/Footer.css');
+@import url('./Header/Header.css');
+/* @import url('./Image'); */
+@import url('./Loader/Loader.css');
+@import url('./Modal/Modal.css');
+@import url('./Sidebar/Sidebar.css');
+@import url('./Toast/Toast.css');

@@ -3,13 +3,21 @@ import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
 import { makeServer } from "./server";
+import { BrowserRouter } from "react-router-dom";
+import { AlertProvider, LayoutProvider } from './Context';
+
 
 // Call make Server
 makeServer();
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+
+  <BrowserRouter>
+    <AlertProvider>
+      <LayoutProvider>
+        <App />
+      </LayoutProvider>
+      </AlertProvider>
+  </BrowserRouter>,
   document.getElementById("root")
 );

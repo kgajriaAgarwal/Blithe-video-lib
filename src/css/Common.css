@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Quintessential&display=swap');
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: var(--lightgray-color);
+    position: relative;
+    min-height: 100vh;
+    width:100%;
+    overflow: hidden;
+}
+
+.avatar-badge{
+    line-height:1rem;
+}
+
+.flex-container-row{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap:20px;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.flex-container-row-center{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap:20px;
+    justify-content: center safe;
+    align-items: center;
+
+}
+
+.flex-container-column{
+    display: flex;
+    flex-direction: column;
+    background-color: brown;
+    text-align: center;
+}
+
+.heading-name{
+    color: var(--primary-bg);
+    font-weight: 600;
+    text-align: center;
+    margin: 10px 0;
+}
+
+.button{
+    border: 0;
+    outline: none;
+
+}
+
+.button:hover{
+    cursor: pointer;
+}
+
+/* //forcard */
+
+.card-container {
+    min-width: 14rem
+}
+
+.card-des {
+    /* text-overflow: ellipsis; */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-wrap: break-word;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.text-bold{
+    font-weight: 600;
+}
+
+/* For desktop: */
+.col_1 {width: 8.33%;}
+.col_2 {width: 16.66%;}
+.col_3 {width: 25%;}
+.col_4 {width: 33.33%;}
+.col_5 {width: 41.66%;}
+.col_6 {width: 50%;}
+.col_7 {width: 58.33%;}
+.col_8 {width: 66.66%;}
+.col_9 {width: 75%;}
+.col_10 {width: 83.33%;}
+.col_11 {width: 91.66%;}
+.col_12 {width: 100%;}
+.col_13 {width: 20%;}
+
+[class*="col_"] {
+    float: right;
+}

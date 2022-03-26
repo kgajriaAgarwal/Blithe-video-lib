@@ -1,0 +1,21 @@
+/* .snackbar-class{
+    display: block !important;
+    z-index: 98 !important;
+    color: var(--whitepeach-color) !important;
+    background-color: transparent !important;
+}
+
+.snackbar-class .alert{
+    width: 100% !important;
+} */
+
+.snackbar-class{
+    display: block;
+    z-index: 98 ;
+    color: var(--whitepeach-color) ;
+    background-color: transparent ;
+}
+
+.snackbar-class .alert{
+    width: 100%;
+}

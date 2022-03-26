@@ -1,0 +1,21 @@
+.dashboard-layout{
+    top: 4rem;
+    background-color: var(--lightgray-color);
+    position: absolute;
+    text-align: center;
+    padding: 20px;
+    height:100%;
+    overflow: auto;
+    overflow-x: hidden;
+    height: 90vh;
+}
+
+.dashboard-layout-unshift{
+    left: 0px;
+    width: calc(100% - 0px);
+}
+
+.dashboard-layout-shift-left{
+    left: 15rem;
+    width: calc(100% - 15rem);
+}
