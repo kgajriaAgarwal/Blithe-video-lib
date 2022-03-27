@@ -1,6 +1,5 @@
 import react, {useEffect} from 'react';
 import { useLayout, useAlert } from '../../Context';
-import Dashboard_route from '../../route/Dashboard_route';
 import { Alert } from '../../Shared';
 import './DashboardLayout.css';
 import DashboardRoute from './DashboardRoute';
