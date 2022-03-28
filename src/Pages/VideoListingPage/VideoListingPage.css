@@ -1,0 +1,44 @@
+@import url('../../css/Common.css');
+@import url('../../Shared/index.css');
+
+.flex-container-row.featured-categories{
+    background-color: var(--whitepeach-color);
+    flex-wrap: wrap;
+}
+
+.chips-container{
+    display: inline-flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex-basis: content;
+    width:100%;
+    background-color: var(--tertiary-color);
+    /* height:70px; */
+}
+
+.chip-word-flex{
+    display: inline-flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    /* background-color: salmon; */
+}
+
+.chip-word{
+    background-color: var(--secondary-color);
+    height: -moz-fit-content;
+    height: fit-content;
+    margin: 5px;
+    padding: 5px;
+    border-radius: 5px;
+    color: white;
+    border: none;
+    height: 30px;
+    letter-spacing: 1.5px;
+    cursor: pointer;
+}
+
+.chips-container .sel-ctgry{
+    background-color: linen;
+    border: 1px solid var(--primary-bg);
+    color: var(--primary-bg);
+}

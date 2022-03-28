@@ -7,6 +7,7 @@ import { Modal } from "./Modal/Modal";
 import { Toast } from "./Toast/Toast";
 import { Alert } from "./Alert/Alert";
 import { Sidebar } from "./Sidebar/Sidebar";
+import { VideoCard } from "./VideoCard/VideoCard";
 
 
 export { 
@@ -18,5 +19,6 @@ export {
         Modal, 
         Toast,
         Alert, 
-        Sidebar
+        Sidebar,
+        VideoCard
     };

@@ -92,7 +92,8 @@ export const categories = [
                 "Ayurveda  for Respiratory relief",
             ]
 },
-{   img:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ65XbvKpRNM3EGa5eD-fJZ0g1SuX-vB1UZAw&usqp=CAU",
+{   _id: uuid(),
+    img:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ65XbvKpRNM3EGa5eD-fJZ0g1SuX-vB1UZAw&usqp=CAU",
     title:"Pregnancy",
     description:"Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
     subcategory: ["Pregnancy symptoms",
@@ -163,7 +164,8 @@ export const categories = [
         "respiratory problems"
   ]
 },
-{   img:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1jzzTKtx1E-gr2g4ci-qHkforVpf8kc-Ogw&usqp=CAU",
+{   _id: uuid(),
+    img:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1jzzTKtx1E-gr2g4ci-qHkforVpf8kc-Ogw&usqp=CAU",
     title:"Fitness",
     description:"Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
     subcategory:["Cardio",
@@ -194,7 +196,7 @@ export const categories = [
     _id: uuid(),
     id:10,
     img:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNT3ozmvVdMCtsL8kgt-1vSjukFvJ8xHID7w&usqp=CAU",
-    title:"healthcare management careers",
+    title:"Healthcare management careers",
     description:"Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
     brandfilters:["Bactigras Dressing","Ent dressings","NRS HealthCare"],
     productTags:["Physician and Surgeon",

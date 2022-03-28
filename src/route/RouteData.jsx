@@ -3,13 +3,15 @@ import {BrowserRouter as Router, Route, Routes, Link} from 'react-router-dom';
 import MockAPI from '../Helpers/Helpers/MockMan';
 import Dashboard from '../Pages/Dashboard/index';
 import PrivateRoute from './PrivateRoute';
+import VideoListingPage from '../Pages/VideoListingPage/VideoListingPage';
+import Dashboard_route from './Dashboard_route';
 
 const HomePage = React.lazy(() => import('../Pages/HomePage/HomePage'));
 
 const NoMatch = () => {
     return (
       <div>
-        <h2>404.. This page is not found!</h2>s
+        <h2>404.. This page is not found!</h2>
         <p>
           <Link to="/">Go to the home page</Link>
         </p>
@@ -23,8 +25,7 @@ const RouteData = () =>{
     return(
         <Routes>          
             <Route exact path='/mockman' element={<MockAPI/>}/>
-            <Route path="*" element={<NoMatch />} />
-            <Route exact path='/' element={<Dashboard/>}/>
+            <Route path='/*' element={<Dashboard/>}/>
         </Routes>
    );
 }
