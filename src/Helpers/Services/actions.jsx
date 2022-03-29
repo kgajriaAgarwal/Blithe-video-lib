@@ -39,3 +39,15 @@ export const getVideos = async (data) => {
   const response = await mainApiService("getVideos", data);
   return response;
 };
+
+//Action to get Liked videos
+export const getLikedVideos = async (data) => {
+  const response = await mainApiService("getLikedVideos", data);
+  return response;
+};
+
+//ACTION TO add To Liked Videos LIST..
+export const actionAddToLikedVideosList = async (data) => {
+  const response = await mainApiService("actionAddToLikedVideosList", data);
+  return response;
+};

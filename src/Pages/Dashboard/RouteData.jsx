@@ -1,8 +1,9 @@
 import React from 'react';
 import {BrowserRouter as Router, Route, Routes, Link} from 'react-router-dom';
-import Dashboard_route from '../../route/Dashboard_route';
+import PrivateRoute from '../../route/PrivateRoute';
 const HomePage = React.lazy(() => import('../HomePage/HomePage'));
 const VideoListingPage = React.lazy(() => import('../VideoListingPage/VideoListingPage'));
+const LikedVideosPage = React.lazy(() => import('../LikedVideosPage/LikedVideosPage'));
 
 function NoMatch() {
     return (
@@ -20,6 +21,11 @@ function NoMatch() {
 const RouteData = () =>{
     return(
         <Routes>  
+           <Route exact path='/user' element={<PrivateRoute/>}>                
+              <Route exact path="/user/liked-videos"  element={<LikedVideosPage/>}/> 
+                {/* <Route exact path='/user/wishlist' element={<Wishlist/>}/> */}
+            </Route>
+            {/* <Route exact path="/liked-videos"  element={<LikedVideosPage/>}/>  */}
             <Route exact path="/videos/:categoryId"  element={<VideoListingPage/>}/> 
             {/* <Route exact path='/category' element={<VideoListingPage/>}/>  */}
             <Route exact path='/home' element={<HomePage/>}/>

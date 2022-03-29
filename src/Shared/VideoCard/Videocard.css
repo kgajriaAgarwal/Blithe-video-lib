@@ -1,10 +1,10 @@
 .video-card-container{
-    width: 30rem;
+    width: 24rem;
     height: 22rem;
 }
 
 .video-card-img {
-    object-fit: cover;
+    object-fit: fill;
     /* height: 60%; */
     width: 100%;
     /* padding: 1.5rem; */
@@ -15,7 +15,7 @@
 
 .video-card-container:hover{
     background-color: lightslategrey;
-    transform: scale(1.10, 1.25);
+    /* transform: scale(0.75, 0.75); */
     transition: all .2s ease-in-out;
     z-index:1;
 }
@@ -27,4 +27,7 @@
     justify-content: center;
     align-items: center;
     gap: 10px;
+}
+.card-btn-dismiss{
+    box-shadow: none;
 }

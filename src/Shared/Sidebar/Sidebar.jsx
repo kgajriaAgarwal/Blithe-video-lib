@@ -40,10 +40,10 @@ export const Sidebar = () => {
                             <MdOutlineWatchLater color='white' size='1.5rem' className='nav-icon'/>
                             <span className="links_name">Watch later</span>
                         </a>
-                        <a href="#" >
+                        <Link to="/user/liked-videos" >
                             <BiLike color='white' size='1.5rem' className='nav-icon'/>
                             <span className="links_name">Liked videos</span>
-                        </a>
+                        </Link>
                         <a href="#" >
                             <MdPlaylistPlay color='white' size='1.5rem' className='nav-icon'/>
                             <span className="links_name">Playlists</span>

@@ -32,7 +32,6 @@ const Login = () =>{
 
         actionLogin(loginData)
         .then((response) => {
-          console.log("resp........", response);
           if (response.data && response.status === 200) {
              navigate("/");
              setAlertContent({_id: uuid(), isShow:true, type:'SUCCESS', content:"You have been loggen in successfully!"})

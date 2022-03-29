@@ -86,7 +86,9 @@ export const loginHandler = function (schema, request) {
           "The credentials you entered are invalid. Unauthorized access error.",
         ],
       }
-    );
+      
+      );
+
   } catch (error) {
     return new Response(
       500,

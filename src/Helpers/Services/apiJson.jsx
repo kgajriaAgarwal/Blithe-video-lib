@@ -1,3 +1,5 @@
+const encodedToken = localStorage.getItem("authData");
+
 export const ApiJson = { 
 
   login: {
@@ -69,4 +71,29 @@ export const ApiJson = {
       showResultMessage: false,
       showErrorMessage: false,
   },
+
+  getLikedVideos: {
+    url: '/user/likes',
+    method: 'GET',
+    data: {},
+    headers: {
+      'Accept': '*/*',
+      'Content-Type': 'application/json',
+      'authorization': encodedToken
+    }, 
+    showResultMessage: false,
+    showErrorMessage: false,
+  },
+
+  actionAddToLikedVideosList:{
+    url: '/user/likes',
+      method: 'POST',
+      data: {},
+      headers: {
+        'Content-Type': 'application/json',
+        'authorization': encodedToken
+      }, 
+      showResultMessage: false,
+      showErrorMessage: true,
+  }
 }

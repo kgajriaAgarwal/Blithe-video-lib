@@ -95,7 +95,7 @@ const VideoListingPage = () =>{
                 {/* //filter DATA ACC TO CATEEGORY */}
                 { videoData && videoData.length?
                     videoData.filter(el => el.category === selectedCategory).map((cVal,cIndx)=>
-                    <VideoCard key={cIndx} video_data={cVal} />
+                    <VideoCard key={cIndx} video_data={cVal} module="VideosListingPage"/>
                     )
                 :''}        
             </div>
