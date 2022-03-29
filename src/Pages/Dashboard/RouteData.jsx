@@ -22,6 +22,7 @@ const RouteData = () =>{
         <Routes>  
             <Route exact path="/videos/:categoryId"  element={<VideoListingPage/>}/> 
             {/* <Route exact path='/category' element={<VideoListingPage/>}/>  */}
+            <Route exact path='/home' element={<HomePage/>}/>
             <Route exact path='/' element={<HomePage/>}/>
         </Routes>
    );

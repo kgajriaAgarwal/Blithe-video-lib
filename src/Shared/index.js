@@ -8,6 +8,8 @@ import { Toast } from "./Toast/Toast";
 import { Alert } from "./Alert/Alert";
 import { Sidebar } from "./Sidebar/Sidebar";
 import { VideoCard } from "./VideoCard/VideoCard";
+import { Input } from "./Input/Input";
+import { InputField } from "./Input/InputField";
 
 
 export { 
@@ -20,5 +22,7 @@ export {
         Toast,
         Alert, 
         Sidebar,
-        VideoCard
+        VideoCard,
+        InputField,
+        Input
     };

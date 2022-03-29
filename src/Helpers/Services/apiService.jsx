@@ -104,7 +104,7 @@ const mainApiService = async (apiKeyName, data) => {
         console.log("resulttt@@:", result)
       apiFailCounter = 0;
       if (result.data && result) {
-        if (result.data.access_token) {
+        if (result.data.encodedToken) {
           const message = "Login success!";
           if (requestObject.showResultMessage === true)
             showSuccessToast(message);

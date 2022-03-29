@@ -1,0 +1,155 @@
+/* @import '../../Common.css'; */
+@import '../../css/Common.css';
+
+.auth{
+    background-color: var(--lightgray-color);
+    width: 100%;
+    height: 100vh;
+    display: flex;
+}
+
+.auth-img-container{
+    position: relative;
+    width: 50%;
+    height:100%;   
+}
+
+.auth-img-container img:before{
+    content: '';
+    position: absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    z-index: 1;
+    mix-blend-mode: screen;
+}
+
+.auth-img-container img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.auth-content-container{
+    display: flex;
+    width: 50%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.auth-content-container .auth-form{
+    width:50%;    
+}
+
+.blithe-logo{
+    height:5rem;
+    width:5rem;
+    /* border-radius: 50%; */
+    margin-bottom: 10px;
+}
+
+.auth-content-container .auth-form .heading{
+    color: var(--primary-bg);
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    border-bottom: 4px solid var(--primary-bg);
+    display: inline-block;
+    letter-spacing: 1px;
+}
+
+.input-field{
+    margin-bottom: 1rem;
+}
+
+.float-container{
+    /* margin-bottom: 2rem; */
+    text-align: left;
+}
+
+.eye-icon{
+    z-index: 2;
+    position: absolute;
+    margin-left: auto;
+    right: 10px;
+    padding: 5px;
+    padding-top: 10px
+}
+
+.auth-content-container .auth-form .btn-primary{
+    width:50%;
+}
+
+.auth-content-container .auth-form .remember{
+    margin-bottom: 10px;
+    color: var(--secondary-color);
+    font-weight: 400;
+}
+
+.remember input{
+    color: var(--primary-bg);
+    margin-right: 5px;
+}
+
+.inputBx p{
+    color: var(--darkgray-color);
+}
+
+.sm-container{
+    border:2px solid var(--primary-bg);
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding:10px;
+}
+
+.flex-content{
+    width:60%;
+}
+
+.btn-link-forgot-password{
+    color: var(--secondary-color);
+    text-decoration: underline;
+    font-weight: 600;
+}
+
+.btn-link-forgot-password:hover{
+    color: var(--primary-bg);
+}
+
+@media (max-width:768px){
+    section .auth-img-container{
+        position: absolute;
+        top:0;
+        left:0;
+        width:100%;
+        height:100%;
+    }
+
+    section .auth-content-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+    }
+
+    section .auth-content-container .auth-form{
+        width: 100%;
+        padding:2rem;
+        background-color: var(--lightgray-color);
+        opacity: 0.9;
+        margin: 2rem;
+    }
+}
+
+
+

@@ -85,15 +85,18 @@
     gap:10px;
 }
 
-.profile_content #log-out{
-    position: absolute;
-    margin: 0;
-    margin-right: 10px;
-    right: 0%;
-    transform: translateX(-50%);
+.btn-logout{
+    background-color: transparent;
+    border: 0;
 }
 
+.btn-logout:hover{
+    cursor: pointer;
+}
 
+.btn-logout:hover:before {
+    content: "Logout !!"
+  }
 
 @media (max-width:768px){
     .sidebar{

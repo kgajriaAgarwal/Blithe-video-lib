@@ -1,9 +1,8 @@
+import React, {useEffect} from "react";
 import "./App.css";
 import { makeServer } from "./server";
 import BlitheRoute from "./route/BlitheRoute";
 import { useLocation } from "react-router-dom";
-
-
 
 // Call make Server
 makeServer();

@@ -13,7 +13,7 @@ export const CategoryCard = (props) =>{
             <div className="card-content-container">
                 <p className="text-sm card-des">{props.item.title}</p>
                 <p className='text-xs card-des'>{props.item.description}</p>
-                <div className="flex-content">
+                <div className="flex-content-category">
                     {/* <a href="../Product_Listing/Product_Listing.html">
                         <button className="btn card-btn card-btn-text explore-btn"><span className='text-lg'>Explore More..</span></button>
                     </a> */}

@@ -3,8 +3,10 @@ import blitheLogo from '../../Assets/Images/vl7.PNG'
 import {Image} from '../index';
 import menuIcon from '../../Assets/Icons/menu.png';
 import { BiMenu , BiHomeAlt , BiLike} from "react-icons/bi";
-import { MdExplore, MdOutlineSubscriptions, MdHistory, MdOutlineWatchLater, MdPlaylistPlay, MdLogout } from "react-icons/md";
+import { MdExplore, MdOutlineSubscriptions, MdHistory, MdOutlineWatchLater, MdPlaylistPlay, MdLogout, MdOutlineLogin, MdOutlineLabelImportant } from "react-icons/md";
 import './Sidebar.css';
+import { Link } from 'react-router-dom';
+import { clearLocalStorage} from '../../Helpers/Helpers/Utils';
 
 export const Sidebar = () => {
     return(
@@ -18,14 +20,14 @@ export const Sidebar = () => {
                 </div>
                 <ul className="nav_list">
                     <li>
-                        <a href="#">
+                        <Link to="/">
                             <BiHomeAlt color='white' size='1.5rem' className='nav-icon'/>
                             <span className="links_name">Home</span>
-                        </a>
-                        <a href="#">
+                        </Link>
+                        <Link to="/videos/:categoryId">
                             <MdExplore color='white' size='1.5rem' className='nav-icon' />
                             <span className="links_name">Explore </span>
-                        </a>
+                        </Link>
                         <a href="#">
                             <MdOutlineSubscriptions color='white' size='1.5rem' className='nav-icon'/>
                             <span className="links_name">Subscriptions </span>
@@ -46,6 +48,14 @@ export const Sidebar = () => {
                             <MdPlaylistPlay color='white' size='1.5rem' className='nav-icon'/>
                             <span className="links_name">Playlists</span>
                         </a>
+                        <Link to="/login" >
+                            <MdOutlineLogin color='white' size='1.5rem' className='nav-icon'/>
+                            <span className="links_name">Login</span>
+                        </Link>
+                        <Link to="/signup" >
+                            <MdOutlineLabelImportant color='white' size='1.5rem' className='nav-icon'/>
+                            <span className="links_name">SignUp</span>
+                        </Link>
                        
                     </li>
                 </ul>
@@ -57,7 +67,10 @@ export const Sidebar = () => {
                                 alt="user"/>
                         <p>karishma gajria</p>
                     </div>
-                    <MdLogout color='white' size='2rem' id="log-out"/>
+                    {/* //clearLocalStorage() */}
+                    <button className='btn-logout' onClick={()=>clearLocalStorage}>
+                        <MdLogout color='white' size='2rem' id="log-out" />
+                    </button>                    
                 </div>
             </div>
         </>

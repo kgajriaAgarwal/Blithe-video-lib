@@ -7,6 +7,8 @@ import VideoListingPage from '../Pages/VideoListingPage/VideoListingPage';
 import Dashboard_route from './Dashboard_route';
 
 const HomePage = React.lazy(() => import('../Pages/HomePage/HomePage'));
+const LoginPage = React.lazy(() => import('../Pages/Authentication/Login/Login'));
+const SignUpPage = React.lazy(() => import('../Pages/Authentication/SignUp/SignUp'));
 
 const NoMatch = () => {
     return (
@@ -23,7 +25,9 @@ const NoMatch = () => {
 //Routing Data
 const RouteData = () =>{
     return(
-        <Routes>          
+        <Routes>         
+            <Route exact path='/signup' element={<SignUpPage/>}/> 
+            <Route exact path='/login' element={<LoginPage/>}/> 
             <Route exact path='/mockman' element={<MockAPI/>}/>
             <Route path='/*' element={<Dashboard/>}/>
         </Routes>
