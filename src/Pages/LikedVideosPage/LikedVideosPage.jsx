@@ -5,12 +5,12 @@ import { VideoCard } from '../../Shared';
 
 const LikedVideosPage = () =>{
 
-    const auth = getLocalStorage("authData");
+    const encodedToken = getLocalStorage("authData");
     const [ likedVideosData, setLikedVideosData] = useState([])
 
     const getlikedVideos = async () => {
         try {
-          const response = await axios.get('/user/likes', { headers: { authorization: auth } });
+          const response = await axios.get('/user/likes', { headers: { authorization: encodedToken } });
           if(response.status === 200){
               setLikedVideosData(response?.data?.likes);
           }
