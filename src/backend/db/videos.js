@@ -27,7 +27,7 @@ export const videos = [
     description:
       "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.",
     creator: "Medatronics Diabetes",
-    video:'https://www.youtube.com/embed/ZoH8U5HqyWE',
+    video:'ZoH8U5HqyWE',
     category:'Healthcare Devices',
     subcategory:'insulin infusion pumps'
     //<iframe width="1278" height="719" src="https://www.youtube.com/embed/ZoH8U5HqyWE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -40,7 +40,7 @@ export const videos = [
     description:
       "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.",
     creator: "Jessica Louise Ashe",
-    video:'https://www.youtube.com/embed/zbDUAeVJPtg',
+    video:'zbDUAeVJPtg',
     category:'Healthcare Devices',
     subcategory:'insulin infusion pumps'
     //<iframe width="1278" height="719" src="https://www.youtube.com/embed/zbDUAeVJPtg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -53,7 +53,7 @@ export const videos = [
     description:
       "Is insulin pump better than multiple daily injections? 5 things you should know before switching from pens to an insulin pump. ",
     creator: "Type One Talks",
-    video:'https://www.youtube.com/embed/1SwE9UMqPMQ',
+    video:'1SwE9UMqPMQ',
     category:'Healthcare Devices',
     subcategory:'insulin infusion pumps'
     //<iframe width="1278" height="719" src="https://www.youtube.com/embed/1SwE9UMqPMQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -67,7 +67,7 @@ export const videos = [
     description:
       "A BP monitor, also known as a blood pressure machine or BP machine, is a device used to measure blood pressure.",
     creator: "Khojdeal",
-    video:'https://www.youtube.com/embed/qbcA7TtfnOM',
+    video:'qbcA7TtfnOM',
     category:'Healthcare Devices',
     subcategory:'BP monitors'
     //<iframe width="1278" height="719" src="https://www.youtube.com/embed/qbcA7TtfnOM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -80,7 +80,7 @@ export const videos = [
     description:
       "Top 5 | Best blood pressure monitor in India 2022 | Best BP machine | Omron 2170 review . This video will help you to find the best blood pressure machine for home use.",
     creator: "Khojdeal",
-    video:'https://www.youtube.com/embed/ZK4WvbWo-F8',
+    video:'ZK4WvbWo-F8',
     category:'Healthcare Devices',
     subcategory:'BP monitors'
     //<iframe width="1278" height="719" src="https://www.youtube.com/embed/ZK4WvbWo-F8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -94,7 +94,7 @@ export const videos = [
     description:
       "In this video Bhargav is reviewing Top 2 Best body weight scales in Hindi. Which is Based on Accuracy with proof. Hope this Accurate Digital weight Scale Review with Proof will be helpful for you. Bhargav will be comparing Hoffen Weight Scale with RAF weight machine.",
     creator: "Bhargab Vlogs",
-    video:'https://www.youtube.com/embed/2q0ADChGEmc',
+    video:'2q0ADChGEmc',
     category:'Healthcare Devices',
     subcategory:'Weighing Scales'
     //<iframe width="1278" height="719" src="https://www.youtube.com/embed/2q0ADChGEmc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -107,7 +107,7 @@ export const videos = [
     description:
       "Here is the list of Best Weighing Scales in India with Price. ",
     creator: "Top Picks",
-    video:'https://www.youtube.com/embed/kAVxMey0aHo',
+    video:'kAVxMey0aHo',
     category:'Healthcare Devices',
     subcategory:'Weighing Scales'
     //<iframe width="1278" height="719" src="https://www.youtube.com/embed/kAVxMey0aHo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -120,7 +120,7 @@ export const videos = [
     description:
       "Here is the list of Glucometers  in India. ",
     creator: "Top Picks",
-    video:"https://www.youtube.com/embed/qNMaSq58cTs",
+    video:"qNMaSq58cTs",
     category:'Healthcare Devices',
     subcategory:'Glucometers'
     //<iframe width="1278" height="719" src="https://www.youtube.com/embed/qNMaSq58cTs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -133,7 +133,7 @@ export const videos = [
     description:
       "So you want to become a podiatrist. You like feet, maybe a little bit too much, but hey I'm not one to judge. Let's debunk the public perceptions myths, and give it to you straight. This is the reality of podiatry.",
     creator: "Med School Insiders",
-    video:"https://www.youtube.com/embed/7x99eI4P-BA",
+    video:"7x99eI4P-BA",
     category:'Healthcare management careers',
     subcategory:'Podiatrist'
     //<iframe width="1278" height="719" src="https://www.youtube.com/embed/7x99eI4P-BA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -146,7 +146,7 @@ export const videos = [
     description:
       "Pharmacist Interview | Pharmacy Interview questions | PD Classes",
     creator: "PD Classes",
-    video:"https://www.youtube.com/embed/yx5cT5oTtiw",
+    video:"yx5cT5oTtiw",
     category:'Healthcare management careers',
     subcategory:'Pharmacist'
   },
@@ -158,7 +158,7 @@ export const videos = [
     description:
       "So you want to become a nurse practitioner. You want to work in healthcare, but being a doctor seems like overkill. Why not have many of the doctoring upsides while avoiding many of the doctoring downsides. ",
     creator: "Med School Insiders",
-    video:"https://www.youtube.com/embed/XpgRBz8mJvs",
+    video:"XpgRBz8mJvs",
     category:'Healthcare management careers',
     subcategory:'Nurse Practitioner'
   },
@@ -170,7 +170,7 @@ export const videos = [
     description:
       "Hey, guys! I have had a lot of requests for a video of my journey and why I chose optometry. This video covers why I became an optometrist, my pre-med college experience and getting into optometry school. Basically how I became an optometrist and started my optometry career. ",
     creator: "Med School Insiders",
-    video:"https://www.youtube.com/embed/MrIHT5G5GYw",
+    video:"MrIHT5G5GYw",
     category:'Healthcare management careers',
     subcategory:'Optometrist'
   },
@@ -182,7 +182,7 @@ export const videos = [
     description:
       "Physician Assistants (PAs) are health care professionals licensed to practice medicine under physician supervision. They are formally trained to provide diagnostic, therapeutic, and preventive ",
     creator: "Med School Insiders",
-    video:"https://www.youtube.com/embed/V42RgIXx4rA",
+    video:"V42RgIXx4rA",
     category:'Healthcare management careers',
     subcategory:'Physician Assistant'
     //<iframe width="1278" height="719" src="https://www.youtube.com/embed/V42RgIXx4rA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -196,7 +196,7 @@ export const videos = [
     description:
       "Practicing yoga during pregnancy proves to be highly beneficial for expectant mothers. This video provides you with the list of some best yoga asanas that are safe to practice in pregnancy.",
     creator: "Med School Insiders",
-    video:"https://www.youtube.com/embed/RrB77_yU_ZM",
+    video:"RrB77_yU_ZM",
     category:'Yoga',
     subcategory:'pregnancy and yoga'
   },
@@ -208,7 +208,7 @@ export const videos = [
     description:
       "Our busy schedule is taking away our energy to work on our bodies. Here are five yoga asanas you should practice daily to keep your body healthy and fit. ",
     creator: "Fit Tak",
-    video:"https://www.youtube.com/embed/RJ44oIxWiYI",
+    video:"RJ44oIxWiYI",
     category:'Yoga',
     subcategory:'Morning yoga'
   },

@@ -10,6 +10,7 @@ import { Sidebar } from "./Sidebar/Sidebar";
 import { VideoCard } from "./VideoCard/VideoCard";
 import { Input } from "./Input/Input";
 import { InputField } from "./Input/InputField";
+import { PlayListModal } from "./PlayListModal/PlayListModal";
 
 
 export { 
@@ -24,5 +25,6 @@ export {
         Sidebar,
         VideoCard,
         InputField,
-        Input
+        Input,
+        PlayListModal
     };

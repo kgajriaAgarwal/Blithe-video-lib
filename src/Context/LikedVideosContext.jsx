@@ -32,7 +32,7 @@ const LikedVideosProvider = ({ children }) => {
         } catch (err) {
           setAlertContent({_id: uuid(), isShow:true, type:'ERROR', content:"Unexpected error please try again later !!"})
         }
-      };
+    };
 
     const removeFromLikedVideos = async (id) => {
       try {

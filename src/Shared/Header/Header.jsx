@@ -3,11 +3,12 @@ import playlistIcon from '../../Assets/Icons/playlist.png';
 import './Header.css';
 import { Link } from 'react-router-dom';
 import { BiMenu , BiHomeAlt } from "react-icons/bi";
-import { useLayout } from '../../Context'
+import { useLayout, usePlaylist } from '../../Context'
 
 export const Header = (props) =>{
 
     const {showSidebar , setShowSidebar} = useLayout();
+    const { playlistData } = usePlaylist();
 
     return(
         <>
@@ -36,12 +37,12 @@ export const Header = (props) =>{
                     </div>
                     <div className="vl"></div>
                     <div className="header-cart-container badge-container">
-                        <a href="#">
+                        <Link to="/user/playlists">
                            <div className="badge-container">
                             <img className="xs" src={playlistIcon} alt="icon"/>
-                            <span className="avatar-badge avatar-badge-online">0</span>
+                            <span className="avatar-badge avatar-badge-online">{playlistData?.length}</span>
                             </div>
-                        </a>
+                        </Link>
                     </div>
                 </div>
             </header>

@@ -40,6 +40,7 @@ axios.interceptors.request.use(
 
 const prepareDataObject = (_data_, paramObj) => {
   for (let key in _data_) {
+
     if (paramObj[key] || paramObj[key] === false) {
       _data_[key] = paramObj[key];
     } else {

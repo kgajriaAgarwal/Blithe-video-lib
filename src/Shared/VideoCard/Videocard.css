@@ -31,3 +31,12 @@
 .card-btn-dismiss{
     box-shadow: none;
 }
+
+.action-container{
+    gap: 10px;
+    justify-content: center;
+}
+
+.action-container .btn{
+    margin: 0;
+}

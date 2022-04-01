@@ -30,37 +30,31 @@ const VideoListingPage = () =>{
         }
     ,[categoryId])
 
-    useEffect(()=> {
-        getVideos()
-        .then(res=> {
-            if(res.status === 200){
-                setVideoData(res.data.videos);
-            }else{
-                setAlertContent({_id: uuid(), isShow:true, type:'ERROR', content:"Unexpected error.Please try again later."})
-            }            
-        })
-        .catch((error) => {
-                setAlertContent({_id: uuid(), isShow:true, type:'ERROR', content:"Unexpected error.Please try again later."})
-            })
-        }
-    ,[])
-
-    useEffect(()=> {
-        getAllCategory()
-        .then(res=> {
-            if(res.status === 200){
-                setCategoryData(res.data.categories);
-                const sel_ctgry = res.data.categories.find(ctgry => ctgry._id === categoryId);
+    const getAPI = (func, str) => {
+        func
+          .then((response) => {
+            if (response.data && response.status === 200) {
+              if (str === "getAllCategory") {
+                setCategoryData(response.data.categories);
+                const sel_ctgry = response.data.categories.find(ctgry => ctgry._id === categoryId);
                 setSelectedCategory(sel_ctgry.title);
-            }else{
+              } else if (str === "getVideos") {
+                setVideoData(response.data.videos);
+              }
+            } else{
                 setAlertContent({_id: uuid(), isShow:true, type:'ERROR', content:"Unexpected error.Please try again later."})
-            }            
-        })
-        .catch((error) => {
-                setAlertContent({_id: uuid(), isShow:true, type:'ERROR', content:"Unexpected error.Please try again later."})
-            })
-        }
-    ,[])
+            }
+          })
+          .catch((error) => {
+            console.log(error);
+            setAlertContent({_id: uuid(), isShow:true, type:'ERROR', content:"Unexpected error.Please try again later."})
+          });
+      };
+
+    useEffect(() => {
+        getAPI(getAllCategory(), "getAllCategory");
+        getAPI(getVideos(), "getVideos");
+      }, []);
 
     return(
         <>
@@ -94,7 +88,11 @@ const VideoListingPage = () =>{
             <div id="featured-prdcts" className="col-12 flex-container-row featured-categories ">           
                 {/* //filter DATA ACC TO CATEEGORY */}
                 { videoData && videoData.length?
-                    videoData.filter(el => el.category === selectedCategory).map((cVal,cIndx)=>
+                    selectedCategory?
+                        videoData.filter(el => el.category === selectedCategory).map((cVal,cIndx)=>
+                        <VideoCard key={cIndx} video_data={cVal} module="VideosListingPage"/>
+                        )
+                    :videoData.map((cVal,cIndx)=>
                     <VideoCard key={cIndx} video_data={cVal} module="VideosListingPage"/>
                     )
                 :''}        

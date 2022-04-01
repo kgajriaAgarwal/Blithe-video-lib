@@ -40,6 +40,12 @@ export const getVideos = async (data) => {
   return response;
 };
 
+//Action to get Category data by id
+export const getVideoById = async (data) => {
+  const response = await mainApiService("getVideoById", data);
+  return response;
+};
+
 //Action to get Liked videos
 export const getLikedVideos = async (data) => {
   const response = await mainApiService("getLikedVideos", data);
@@ -49,5 +55,42 @@ export const getLikedVideos = async (data) => {
 //ACTION TO add To Liked Videos LIST..
 export const actionAddToLikedVideosList = async (data) => {
   const response = await mainApiService("actionAddToLikedVideosList", data);
+  return response;
+};
+
+//PLAYLIST
+//ACTION TO get all playlists..
+export const getplaylists = async (data) => {
+  const response = await mainApiService("getplaylists", data);
+  return response;
+};
+
+//Action to Create Playlist
+export const actionCreatePlaylist = async (data) => {
+  const response = await mainApiService("actionCreatePlaylist", data);
+  return response;
+};
+
+//Action to delete a playlist from the playlists of the user in the db
+export const actionDeletePlaylist = async (data) => {
+  const response = await mainApiService("actionDeletePlaylist", data);
+  return response;
+};
+
+//Action to get playlist by id
+export const getPlaylistById = async (data) => {
+  const response = await mainApiService("getPlaylistById", data);
+  return response;
+};
+
+//Action to adds a new video to the playlist of the user in the db
+export const actionAddVideoToPlaylist = async (data) => {
+  const response = await mainApiService("actionAddVideoToPlaylist", data);
+  return response;
+};
+
+//Action To Delete Video From Playlist
+export const actionToDeleteVideoFromPlaylist = async (data) => {
+  const response = await mainApiService("actionToDeleteVideoFromPlaylist", data);
   return response;
 };
