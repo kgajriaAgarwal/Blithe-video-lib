@@ -19,7 +19,6 @@ function NoMatch() {
     );
   }
 
-
 //Routing Data
 const RouteData = () =>{
     return(
@@ -30,7 +29,6 @@ const RouteData = () =>{
             </Route>
             <Route exact path="/video/:videoId"  element={<Video/>}/> 
             <Route exact path="/videos/:categoryId"  element={<VideoListingPage/>}/> 
-            {/* <Route exact path='/category' element={<VideoListingPage/>}/>  */}
             <Route exact path='/home' element={<HomePage/>}/>
             <Route exact path='/' element={<HomePage/>}/>
         </Routes>

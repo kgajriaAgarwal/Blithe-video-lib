@@ -35,6 +35,7 @@
 .action-container{
     gap: 10px;
     justify-content: center;
+    width:100%;
 }
 
 .action-container .btn{

@@ -76,7 +76,6 @@ const Video = () => {
 
                 </div>
             </div>
-            {/* <PlayListModal/> */}
         </>
     );
 }

@@ -44,10 +44,10 @@ export const Sidebar = () => {
                             <BiLike color='white' size='1.5rem' className='nav-icon'/>
                             <span className="links_name">Liked videos</span>
                         </Link>
-                        <a href="#" >
+                        <Link to="/user/playlists" >
                             <MdPlaylistPlay color='white' size='1.5rem' className='nav-icon'/>
                             <span className="links_name">Playlists</span>
-                        </a>
+                        </Link>
                         <Link to="/login" >
                             <MdOutlineLogin color='white' size='1.5rem' className='nav-icon'/>
                             <span className="links_name">Login</span>
@@ -68,7 +68,9 @@ export const Sidebar = () => {
                         <p>karishma gajria</p>
                     </div>
                     {/* //clearLocalStorage() */}
-                    <button className='btn-logout' onClick={()=>clearLocalStorage}>
+                    <button className='btn-logout' onClick={()=>{
+                            clearLocalStorage
+                        }}>
                         <MdLogout color='white' size='2rem' id="log-out" />
                     </button>                    
                 </div>
