@@ -37,7 +37,7 @@ const VideoListingPage = () =>{
               if (str === "getAllCategory") {
                 setCategoryData(response.data.categories);
                 const sel_ctgry = response.data.categories.find(ctgry => ctgry._id === categoryId);
-                setSelectedCategory(sel_ctgry.title);
+                setSelectedCategory(sel_ctgry?.title);
               } else if (str === "getVideos") {
                 setVideoData(response.data.videos);
               }
@@ -46,7 +46,6 @@ const VideoListingPage = () =>{
             }
           })
           .catch((error) => {
-            console.log(error);
             setAlertContent({_id: uuid(), isShow:true, type:'ERROR', content:"Unexpected error.Please try again later."})
           });
       };

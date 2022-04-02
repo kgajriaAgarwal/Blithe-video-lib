@@ -6,21 +6,25 @@ import { MdPlaylistAdd } from "react-icons/md";
 import { RiPlayListAddFill } from "react-icons/ri";
 import { useParams } from 'react-router-dom';
 import { getVideoById } from '../../Helpers/Services/actions';
-import { useAlert } from '../../Context';
+import { useAlert, useHistory } from '../../Context';
+import { v4 as uuid } from "uuid";
 
 const Video = () => {
 
     const { videoId } = useParams();
-    console.log("videoId is:", videoId);
     const [ videoData, setVideoData] = useState({});
     const {alertContent , setAlertContent} = useAlert();
+    const { addVideoToHistory} = useHistory();
+
+    // useEffect(()=> addVideoToHistory(video_data),[])
 
     useEffect(()=> {
+        
         getVideoById({videoId: videoId})
         .then(res=> {
-            console.log("resp:", res);
             if(res.status === 200){
-                setVideoData(res.data.video);
+                setVideoData(res?.data?.video);
+                addVideoToHistory(res?.data?.video)
             }else{
                 setAlertContent({_id: uuid(), isShow:true, type:'ERROR', content:"Unexpected error.Please try again later."})
             }            

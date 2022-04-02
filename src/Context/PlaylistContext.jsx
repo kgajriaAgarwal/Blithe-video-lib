@@ -37,10 +37,8 @@ const PlaylistProvider = ({children}) => {
     
 
     const createPlaylist = (playlist) =>{
-        console.log("playlist:", playlist);
         actionCreatePlaylist({playlist:playlist})
         .then(res=> {
-            console.log("resssss:", res)
             if(res.status === 201){
                 setPlaylistData(res.data.playlists);
                 setAlertContent({_id: uuid(), isShow:true, type:'SUCCESS', content:"Playlist created successfully!"})

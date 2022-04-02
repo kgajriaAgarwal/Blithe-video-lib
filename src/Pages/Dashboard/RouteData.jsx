@@ -7,6 +7,8 @@ const VideoListingPage = React.lazy(() => import('../VideoListingPage/VideoListi
 const LikedVideosPage = React.lazy(() => import('../LikedVideosPage/LikedVideosPage'));
 const Video = React.lazy(() => import('../Video/Video'));
 const PlayList = React.lazy(() => import('../PlayList/PlayList'));
+const WatchLater = React.lazy(() => import('../WatchLater/WatchLater'));
+const History = React.lazy(() => import('../History/History'));
 
 function NoMatch() {
     return (
@@ -26,6 +28,8 @@ const RouteData = () =>{
            <Route exact path='/user' element={<PrivateRoute/>}>                
               <Route exact path="/user/liked-videos"  element={<LikedVideosPage/>}/> 
               <Route exact path='/user/playlists' element={<PlayList/>}/>
+              <Route exact path='/user/watchlater' element={<WatchLater/>}/>
+              <Route exact path='/user/history' element={<History/>}/>
             </Route>
             <Route exact path="/video/:videoId"  element={<Video/>}/> 
             <Route exact path="/videos/:categoryId"  element={<VideoListingPage/>}/> 

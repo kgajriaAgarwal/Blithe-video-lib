@@ -5,10 +5,16 @@ import menuIcon from '../../Assets/Icons/menu.png';
 import { BiMenu , BiHomeAlt , BiLike} from "react-icons/bi";
 import { MdExplore, MdOutlineSubscriptions, MdHistory, MdOutlineWatchLater, MdPlaylistPlay, MdLogout, MdOutlineLogin, MdOutlineLabelImportant } from "react-icons/md";
 import './Sidebar.css';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { clearLocalStorage} from '../../Helpers/Helpers/Utils';
+import { v4 as uuid } from "uuid";
+import { useAlert } from '../../Context';
 
 export const Sidebar = () => {
+
+    const navigate = useNavigate();
+    const {alertContent , setAlertContent} = useAlert();
+
     return(
         <>
             {/* <h1>side bar</h1> */}
@@ -28,18 +34,18 @@ export const Sidebar = () => {
                             <MdExplore color='white' size='1.5rem' className='nav-icon' />
                             <span className="links_name">Explore </span>
                         </Link>
-                        <a href="#">
+                        {/* <a href="#">
                             <MdOutlineSubscriptions color='white' size='1.5rem' className='nav-icon'/>
                             <span className="links_name">Subscriptions </span>
-                        </a>
-                        <a href="#" >
+                        </a> */}
+                        <Link to="/user/history" >
                             <MdHistory color='white' size='1.5rem' className='nav-icon'/>
-                            <span className="links_name">History </span>
-                        </a>
-                        <a href="#">
+                            <span className="links_name">History</span>
+                        </Link>
+                        <Link to="/user/watchlater">
                             <MdOutlineWatchLater color='white' size='1.5rem' className='nav-icon'/>
                             <span className="links_name">Watch later</span>
-                        </a>
+                        </Link>
                         <Link to="/user/liked-videos" >
                             <BiLike color='white' size='1.5rem' className='nav-icon'/>
                             <span className="links_name">Liked videos</span>
@@ -69,7 +75,10 @@ export const Sidebar = () => {
                     </div>
                     {/* //clearLocalStorage() */}
                     <button className='btn-logout' onClick={()=>{
-                            clearLocalStorage
+                            localStorage.clear()
+                            setAlertContent({_id: uuid(), isShow:true, type:'SUCCESS', content:"You heve been logged out successfully!"})
+                            navigate("/")
+
                         }}>
                         <MdLogout color='white' size='2rem' id="log-out" />
                     </button>                    
