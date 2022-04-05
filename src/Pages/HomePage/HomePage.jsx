@@ -60,10 +60,7 @@ const HomePage = () =>{
                     )
                 :''}
             </div>
-
-            {/* <button onClick={()=> setAlertContent({_id: uuid(), isShow:true, type:'ERROR', content:'this is an ultimate error meassge'})}>onClick show alert....</button> */}
-        
-            
+                    
         </div >
     );
 }
