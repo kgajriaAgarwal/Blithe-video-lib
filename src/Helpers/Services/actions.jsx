@@ -94,3 +94,48 @@ export const actionToDeleteVideoFromPlaylist = async (data) => {
   const response = await mainApiService("actionToDeleteVideoFromPlaylist", data);
   return response;
 };
+
+//WATCHLATER..
+//ACTION TO get Watchlater Videos
+export const getWatchlaterVideos = async (data) => {
+  const response = await mainApiService("getWatchlaterVideos", data);
+  return response;
+}
+
+//actionAddVideoToWatchlater
+export const actionAddVideoToWatchlater = async (data) => {
+  const response = await mainApiService("actionAddVideoToWatchlater", data);
+  return response;
+}
+
+//actionToDeleteVideoFromWatchlater
+export const actionToDeleteVideoFromWatchlater = async (data) => {
+  const response = await mainApiService("actionToDeleteVideoFromWatchlater", data);
+  return response;
+}
+
+//HISTORY
+//actionTogethistory
+export const getHistory = async (data) => {
+  const response = await mainApiService("getHistory", data);
+  return response;
+}
+
+//Action that adds a video to the history of the user in the db.
+export const actionAddVideoToHistory = async (data) => {
+  const response = await mainApiService("actionAddVideoToHistory", data);
+  return response;
+}
+
+//actionToDeleteVideoFromHistory
+export const actionToDeleteVideoFromHistory = async (data) => {
+  const response = await mainApiService("actionToDeleteVideoFromHistory", data);
+  return response;
+}
+
+//action To Clear All History
+//actionToClearAllHistory
+export const actionToClearAllHistory = async (data) => {
+  const response = await mainApiService("actionToClearAllHistory", data);
+  return response;
+}

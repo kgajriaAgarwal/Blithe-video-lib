@@ -191,4 +191,90 @@ export const ApiJson = {
       showResultMessage: false,
       showErrorMessage: true,
   },
+
+  //WATCHLATER..
+    getWatchlaterVideos: {
+      url: '/user/watchlater',
+      method: 'GET',
+      data: {},
+      headers: {
+        'Accept': '*/*',
+        'Content-Type': 'application/json',
+        'authorization': encodedToken
+      }, 
+      showResultMessage: false,
+      showErrorMessage: false,
+    },
+
+    //action to AddVideo To Playlist
+    actionAddVideoToWatchlater:{
+      url: '/user/watchlater',
+        method: 'POST',
+        data: {
+          video:{}
+        },
+        headers: {
+          'Content-Type': 'application/json',
+          'authorization': encodedToken
+        }, 
+        showResultMessage: false,
+        showErrorMessage: true,
+    },
+
+    //action to deletes a video from the playlist
+    actionToDeleteVideoFromWatchlater:{
+      url: 'user/watchlater/:videoId',
+        method: 'DELETE',
+        data: {},
+        headers: {
+          'Content-Type': 'application/json',
+          'authorization': encodedToken
+        }, 
+        showResultMessage: false,
+        showErrorMessage: true,
+    },
+
+    //HISTORY
+    //getHistory
+    getHistory: {
+      url: '/user/history',
+      method: 'GET',
+      data: {},
+      headers: {
+        'Accept': '*/*',
+        'Content-Type': 'application/json',
+        'authorization': encodedToken
+      }, 
+      showResultMessage: false,
+      showErrorMessage: false,
+    },
+
+    //actionAddVideoToHistory
+    actionAddVideoToHistory:{
+      url: '/user/history',
+        method: 'POST',
+        data: {
+          video:{}
+        },
+        headers: {
+          'Content-Type': 'application/json',
+          'authorization': encodedToken
+        }, 
+        showResultMessage: false,
+        showErrorMessage: true,
+    },
+
+    //action To Delete Video From hISTORY
+    actionToClearAllHistory:{
+      url: '/user/history/all',
+        method: 'DELETE',
+        data: {},
+        headers: {
+          'Content-Type': 'application/json',
+          'authorization': encodedToken
+        }, 
+        showResultMessage: false,
+        showErrorMessage: true,
+    },
+    
 }

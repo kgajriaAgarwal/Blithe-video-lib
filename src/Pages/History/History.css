@@ -1,0 +1,23 @@
+.history-container{
+    display: flex;
+    align-items: center;
+}
+
+.history-container p{
+    width: 90%;
+    padding-left: 10%;
+}
+
+.history-container .btn{
+    right: 10px;
+}
+
+
+.flex-container-row.history-videos{
+    background-color: var(--whitepeach-color);
+    flex-wrap: wrap;
+}
+
+.empty{
+    color: var(--darkred-color);
+}

@@ -51,16 +51,17 @@ const HomePage = () =>{
 
         {/* <!-- featured Categories --> */}
         <p className="heading-md heading-name">Featured Categories</p>
-            <div id="featured-prdcts" className="col-12 flex-container-row featured-categories">
+        <div id="featured-prdcts" className="col-12 flex-container-row featured-categories">
+    
+            {data?.length?
+                data?.map((cVal,cIndx) =>
+                    <CategoryCard key={cIndx} item={cVal}                          
+                    />
+                )
+            :''}
+        </div>
         
-                {data?.length?
-                    data?.map((cVal,cIndx) =>
-                        <CategoryCard key={cIndx} item={cVal}                          
-                        />
-                    )
-                :''}
-            </div>
-                    
+            
         </div >
     );
 }
