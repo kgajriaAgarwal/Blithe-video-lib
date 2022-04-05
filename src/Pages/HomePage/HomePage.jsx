@@ -5,7 +5,7 @@ import { getAllCategory } from '../../Helpers/Services/actions';
 import { Alert, CategoryCard, Corousel, Modal, Toast } from '../../Shared';
 import { useAlert } from '../../Context';
 import { v4 as uuid } from "uuid";
-import axios from 'axios';
+
 
 const HomePage = () =>{
 

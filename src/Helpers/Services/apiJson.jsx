@@ -1,4 +1,4 @@
-const encodedToken = localStorage.getItem("authData");
+const encodedToken = localStorage.getItem("authData") ? localStorage.getItem("authData") : '';
 
 export const ApiJson = { 
 
@@ -117,7 +117,7 @@ export const ApiJson = {
     headers: {
       'Accept': '*/*',
       'Content-Type': 'application/json',
-      'authorization': encodedToken
+      'authorization': localStorage.getItem("authData")
     }, 
     showResultMessage: false,
     showErrorMessage: false,
@@ -132,7 +132,7 @@ export const ApiJson = {
       },
       headers: {
         'Content-Type': 'application/json',
-        'authorization': encodedToken
+        'authorization': localStorage.getItem("authData")
       }, 
       showResultMessage: false,
       showErrorMessage: true,
