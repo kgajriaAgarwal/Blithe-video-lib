@@ -4,6 +4,7 @@ import { useLikedVideos, LikedVideosProvider } from './LikedVideosContext'
 import {  usePlaylist , PlaylistProvider } from './PlaylistContext'
 import {   useWatchlist, WatchLaterProvider  } from './WatchlaterContext';
 import { useHistory, HistoryProvider } from './HistoryContext';
+import { useAuthContext, AuthProvider }  from './AuthContext'
 
 export { 
         //PROVIDERS
@@ -13,6 +14,7 @@ export {
         PlaylistProvider,
         WatchLaterProvider,
         HistoryProvider,
+        AuthProvider,
         
         // CUSTOM HOOKS
         useLayout , 
@@ -20,5 +22,6 @@ export {
         useLikedVideos ,
         usePlaylist,
         useWatchlist,
-        useHistory
+        useHistory,
+        useAuthContext
     };

@@ -12,6 +12,7 @@ const DashboardLayout = () =>{
     const {showSidebar , setShowSidebar} = useLayout();
     const {alertContent , setAlertContent} = useAlert();
     const {  isModalHidden} = usePlaylist();
+    const encodedToken = localStorage.getItem("authData");
 
     //DISMISSES THE ALERT AFTER 3 SEC..
     useEffect(() => {
@@ -20,6 +21,11 @@ const DashboardLayout = () =>{
         }, 3000);
         return () => clearTimeout(timer);
       }, [alertContent]);
+
+    // useEffect(()=> 
+    //   console.log("encodedToken ayayayyyyyyyyyyyyyyyyyy re", encodedToken)
+    // , [encodedToken])
+    
 
     return(
         <>

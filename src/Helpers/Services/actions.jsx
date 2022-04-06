@@ -6,6 +6,7 @@ export const actionLogin = async (data) => {
   const response = await mainApiService("login", data);
   if (response.data.encodedToken) {
     setLocalStorage("authData", response.data.encodedToken);
+    localStorage.setItem("userData", data.foundUser);
   }
   // dispatch({ type: Actions.LOGIN, data: response.data });
   return response;

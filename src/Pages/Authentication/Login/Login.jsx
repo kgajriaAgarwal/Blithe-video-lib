@@ -8,7 +8,9 @@ import axios from 'axios';
 import { useNavigate } from "react-router-dom";
 import { actionLogin } from '../../../Helpers/Services/actions';
 import { v4 as uuid } from "uuid";
-import { useAlert } from '../../../Context/AlertContext';
+// import { useAlert } from '../../../Context/AlertContext';
+import { useAuthContext, useAlert } from '../../../Context';
+
 
 const Login = () =>{
 
@@ -20,6 +22,7 @@ const Login = () =>{
             email:'',
             password:''  
         })
+    const { effectTrigger, setEffectTrigger} = useAuthContext();
 
     //Handle show/hide password
     const handlePassword = () =>{
@@ -35,6 +38,7 @@ const Login = () =>{
           if (response.data && response.status === 200) {
              navigate("/");
              setAlertContent({_id: uuid(), isShow:true, type:'SUCCESS', content:"You have been loggen in successfully!"})
+             setEffectTrigger(!effectTrigger);
           } else{
             setAlertContent({_id: uuid(), isShow:true, type:'ERROR', content:"Unexpected error.Login Failed"})
           }
@@ -86,7 +90,7 @@ const Login = () =>{
                                 <br/>
                                 <Link  to="/forgot-password" className="btn-link-forgot-password" target="_blank">Forgot Password ??</Link>
                             </div>
-                            <button className="btn btn-sm btn-primary" type="submit" onClick={handleLogin}>Sign In</button>
+                            <button className="btn btn-sm btn-primary" type="submit" onClick={(e)=>handleLogin(e)}>Sign In</button>
                             <div className="inputBx">
                                 <p className="text-md">Don't have an account?
                                     <Link  to="/signup" className="btn text-decoration-none btn-sm btn-link">Sign Up</Link>

@@ -1,4 +1,16 @@
+import { useAuthContext } from "../../Context";
+
 const encodedToken = localStorage.getItem("authData") ? localStorage.getItem("authData") : '';
+
+
+// export const getEncodedToken = () => {
+//   debugger
+//   const { effectTrigger, encoded_Token } = useAuthContext();
+//   console.log("effecttrigger, encoded_Token", effectTrigger , encoded_Token);
+//   // if(effectTrigger){
+
+//   // }
+// }
 
 export const ApiJson = { 
 
@@ -117,7 +129,7 @@ export const ApiJson = {
     headers: {
       'Accept': '*/*',
       'Content-Type': 'application/json',
-      'authorization': localStorage.getItem("authData")
+      'authorization': encodedToken
     }, 
     showResultMessage: false,
     showErrorMessage: false,
@@ -132,7 +144,8 @@ export const ApiJson = {
       },
       headers: {
         'Content-Type': 'application/json',
-        'authorization': localStorage.getItem("authData")
+        'authorization': encodedToken
+        // 'authorization': getEncodedToken()
       }, 
       showResultMessage: false,
       showErrorMessage: true,

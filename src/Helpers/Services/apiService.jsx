@@ -70,6 +70,16 @@ const injectParamsToUrl = (_url_, paramObj) => {
 //   return _headers_;
 // };
 
+const injectHeadersToReq = async (_headers_) => {
+  let userInfo = await getLocalStorage('authData');
+
+  if (userInfo) {    
+    _headers_['authorization'] = userInfo
+  }
+
+  return _headers_;
+};
+
 const handleErrorByStatus = (error) => {
 console.log("error:", error);
   if (error && error.data.error) {
@@ -99,7 +109,8 @@ const mainApiService = async (apiKeyName, data) => {
   let requestObject = Object.assign({}, apiDetails);
   requestObject.data = prepareDataObject(requestObject.data, data);
   requestObject.url = injectParamsToUrl(requestObject.url, data);
-  // requestObject.headers = await injectHeadersToReq(requestObject.headers, data);
+  requestObject.headers = await injectHeadersToReq(requestObject.headers, data);
+
   return axios(requestObject)
     .then(function (result) {
         console.log("resulttt@@:", result)
