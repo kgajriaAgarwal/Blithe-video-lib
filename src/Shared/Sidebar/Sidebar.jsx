@@ -17,9 +17,11 @@ export const Sidebar = () => {
     const encodedToken =  getLocalStorage("authData");
     const userData  =  getLocalStorage("userData");
 
+    console.log("encoded token..", encodedToken, userData);
+
     return(
         <>
-            {/* <h1>side bar</h1> */}
+            
             <div className="sidebar">
                 <div className="logo_content">
                     <div className="logo">

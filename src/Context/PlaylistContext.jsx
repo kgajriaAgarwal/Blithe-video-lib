@@ -27,7 +27,11 @@ const PlaylistProvider = ({children}) => {
             if(res.status === 200){
                 setPlaylistData(res.data.playlists);
             }else{
+            if(encodedToken){
                 setAlertContent({_id: uuid(), isShow:true, type:'ERROR', content:"Unexpected error.Please try again later."})
+                }else{
+                setAlertContent({_id: uuid(), isShow:true, type:'ERROR', content:"Kindly login first !!"})
+                }
             }            
         })
         .catch((error) => {
@@ -43,7 +47,11 @@ const PlaylistProvider = ({children}) => {
                 setPlaylistData(res.data.playlists);
                 setAlertContent({_id: uuid(), isShow:true, type:'SUCCESS', content:"Playlist created successfully!"})
             }else{
-                setAlertContent({_id: uuid(), isShow:true, type:'ERROR', content:"Unexpected error.Please try again later."})
+                if(encodedToken){
+                    setAlertContent({_id: uuid(), isShow:true, type:'ERROR', content:"Unexpected error.Please try again later."})
+                    }else{
+                    setAlertContent({_id: uuid(), isShow:true, type:'ERROR', content:"Kindly login first !!"})
+                }
             }            
         })
         .catch((error) => {
@@ -61,7 +69,11 @@ const PlaylistProvider = ({children}) => {
                 setPlaylistData(res.data.playlists);
                 setAlertContent({_id: uuid(), isShow:true, type:'SUCCESS', content:"Playlist deleted successfully!"})
             }else{
-                setAlertContent({_id: uuid(), isShow:true, type:'ERROR', content:"Unexpected error.Please try again later."})
+                if(encodedToken){
+                    setAlertContent({_id: uuid(), isShow:true, type:'ERROR', content:"Unexpected error.Please try again later."})
+                    }else{
+                    setAlertContent({_id: uuid(), isShow:true, type:'ERROR', content:"Kindly login first !!"})
+                }
             }            
         })
         .catch((error) => {
@@ -79,7 +91,11 @@ const PlaylistProvider = ({children}) => {
             if(res.status === 200){
                 setPlaylistVideos(res.data.playlist.videos);
             }else{
-                setAlertContent({_id: uuid(), isShow:true, type:'ERROR', content:"Unexpected error.Please try again later."})
+                if(encodedToken){
+                    setAlertContent({_id: uuid(), isShow:true, type:'ERROR', content:"Unexpected error.Please try again later."})
+                    }else{
+                    setAlertContent({_id: uuid(), isShow:true, type:'ERROR', content:"Kindly login first !!"})
+                }
             }            
         })
         .catch((error) => {
@@ -98,7 +114,11 @@ const PlaylistProvider = ({children}) => {
                 setPlaylistVideos(res.data.playlist.videos);
                 setAlertContent({_id: uuid(), isShow:true, type:'SUCCESS', content:"Video added successfully  to playlist!"})
             }else{
-                setAlertContent({_id: uuid(), isShow:true, type:'ERROR', content:"Unexpected error.Please try again later."})
+                if(encodedToken){
+                    setAlertContent({_id: uuid(), isShow:true, type:'ERROR', content:"Unexpected error.Please try again later."})
+                    }else{
+                    setAlertContent({_id: uuid(), isShow:true, type:'ERROR', content:"Kindly login first !!"})
+                }
             }            
         })
         .catch((error) => {
@@ -117,7 +137,11 @@ const PlaylistProvider = ({children}) => {
                 setPlaylistVideos(res.data.playlist.videos);
                 setAlertContent({_id: uuid(), isShow:true, type:'SUCCESS', content:"Video deleted successfully from playlist!"})
             }else{
-                setAlertContent({_id: uuid(), isShow:true, type:'ERROR', content:"Unexpected error.Please try again later."})
+                if(encodedToken){
+                    setAlertContent({_id: uuid(), isShow:true, type:'ERROR', content:"Unexpected error.Please try again later."})
+                    }else{
+                    setAlertContent({_id: uuid(), isShow:true, type:'ERROR', content:"Kindly login first !!"})
+                }
             }            
         })
         .catch((error) => {

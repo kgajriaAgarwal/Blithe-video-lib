@@ -23,11 +23,15 @@ const LikedVideosProvider = ({ children }) => {
           }else if(res.status === 409){
             setAlertContent({_id: uuid(), isShow:true, type:'ERROR', content:"The video is already in your liked videos list."})
           }else{
-            setAlertContent({_id: uuid(), isShow:true, type:'ERROR', content:"Unexpected error.Please try again later."})
+            if(encodedToken){
+              setAlertContent({_id: uuid(), isShow:true, type:'ERROR', content:"Unexpected error.Please try again later."})
+            }else{
+              setAlertContent({_id: uuid(), isShow:true, type:'ERROR', content:"Kindly login first !!"})
+            }
           }            
       })
       .catch((error) => {
-          setAlertContent({_id: uuid(), isShow:true, type:'ERROR', content:"Unexpected error.Please try again later."})
+          setAlertContent({_id: uuid(), isShow:true, type:'ERROR', content:"Kindly do login first !!"})
       })
     }
 
@@ -39,7 +43,11 @@ const LikedVideosProvider = ({ children }) => {
           setLikedVideos(res?.data?.likes);
           setAlertContent({_id: uuid(), isShow:true, type:'SUCCESS', content:"Video deleted successfully from Liked videos list!"})
         }else{
-          setAlertContent({_id: uuid(), isShow:true, type:'ERROR', content:"Unexpected error.Please try again later."})
+          if(encodedToken){
+            setAlertContent({_id: uuid(), isShow:true, type:'ERROR', content:"Unexpected error.Please try again later."})
+          }else{
+            setAlertContent({_id: uuid(), isShow:true, type:'ERROR', content:"Kindly login first !!"})
+          }
         }            
     })
     .catch((error) => {

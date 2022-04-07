@@ -24,7 +24,11 @@ const WatchLaterProvider = ({ children }) => {
           }else if(res.status === 409){
             setAlertContent({_id: uuid(), isShow:true, type:'ERROR', content:"The video is already in your watch later videos."})
           }else{
-            setAlertContent({_id: uuid(), isShow:true, type:'ERROR', content:"Unexpected error.Please try again later."})
+            if(encodedToken){
+              setAlertContent({_id: uuid(), isShow:true, type:'ERROR', content:"Unexpected error.Please try again later."})
+              }else{
+              setAlertContent({_id: uuid(), isShow:true, type:'ERROR', content:"Kindly login first !!"})
+            }
           }            
       })
       .catch((error) => {
@@ -40,7 +44,11 @@ const WatchLaterProvider = ({ children }) => {
             setWatchLaterVideos(res?.data?.watchlater);
               setAlertContent({_id: uuid(), isShow:true, type:'SUCCESS', content:"Video deleted successfully from playlist!"})
           }else{
+            if(encodedToken){
               setAlertContent({_id: uuid(), isShow:true, type:'ERROR', content:"Unexpected error.Please try again later."})
+              }else{
+              setAlertContent({_id: uuid(), isShow:true, type:'ERROR', content:"Kindly login first !!"})
+            }
           }            
       })
       .catch((error) => {
