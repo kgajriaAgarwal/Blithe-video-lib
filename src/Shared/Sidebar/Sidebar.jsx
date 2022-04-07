@@ -15,9 +15,7 @@ export const Sidebar = () => {
     const navigate = useNavigate();
     const {alertContent , setAlertContent} = useAlert();
     const encodedToken =  getLocalStorage("authData");
-    const userData  =  getLocalStorage("userData");
-
-    console.log("encoded token..", encodedToken, userData);
+    const userData  =  getLocalStorage("userData");   
 
     return(
         <>
