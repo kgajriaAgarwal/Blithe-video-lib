@@ -6,7 +6,7 @@ import './Corousel.css';
 
 export const Corousel = () =>{
 
-    const mySlides = [img1, img2, img3];
+    const mySlides = ["https://www.b2w.tv/hubfs/Healthcare.gif", "https://www.who.int/images/default-source/imported/outbreaks/gifs/sc-01.gif?sfvrsn=b9874f82_17"];
     const [slideIndex, setSlideIndex] = useState(0);
 
      const handleChange = (order) => {

@@ -6,9 +6,8 @@ export const actionLogin = async (data) => {
   const response = await mainApiService("login", data);
   if (response.data.encodedToken) {
     setLocalStorage("authData", response.data.encodedToken);
-    localStorage.setItem("userData", data.foundUser);
+    setLocalStorage("userData", response.data.foundUser);
   }
-  // dispatch({ type: Actions.LOGIN, data: response.data });
   return response;
 };
 
@@ -47,6 +46,7 @@ export const getVideoById = async (data) => {
   return response;
 };
 
+//LIKE / DISLIKE
 //Action to get Liked videos
 export const getLikedVideos = async (data) => {
   const response = await mainApiService("getLikedVideos", data);
@@ -56,6 +56,12 @@ export const getLikedVideos = async (data) => {
 //ACTION TO add To Liked Videos LIST..
 export const actionAddToLikedVideosList = async (data) => {
   const response = await mainApiService("actionAddToLikedVideosList", data);
+  return response;
+};
+
+//action To Delete Video From Liked Videos List
+export const actionRemoveFromLikedVideosList = async (data) => {
+  const response = await mainApiService("actionRemoveFromLikedVideosList", data);
   return response;
 };
 
@@ -135,7 +141,6 @@ export const actionToDeleteVideoFromHistory = async (data) => {
 }
 
 //action To Clear All History
-//actionToClearAllHistory
 export const actionToClearAllHistory = async (data) => {
   const response = await mainApiService("actionToClearAllHistory", data);
   return response;

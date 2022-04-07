@@ -6,7 +6,7 @@ import { BiMenu , BiHomeAlt , BiLike} from "react-icons/bi";
 import { MdExplore, MdOutlineSubscriptions, MdHistory, MdOutlineWatchLater, MdPlaylistPlay, MdLogout, MdOutlineLogin, MdOutlineLabelImportant } from "react-icons/md";
 import './Sidebar.css';
 import { Link, useNavigate } from 'react-router-dom';
-import { clearLocalStorage} from '../../Helpers/Helpers/Utils';
+import { clearLocalStorage, getLocalStorage} from '../../Helpers/Helpers/Utils';
 import { v4 as uuid } from "uuid";
 import { useAlert } from '../../Context';
 
@@ -14,6 +14,8 @@ export const Sidebar = () => {
 
     const navigate = useNavigate();
     const {alertContent , setAlertContent} = useAlert();
+    const encodedToken =  getLocalStorage("authData");
+    const userData  =  getLocalStorage("userData");
 
     return(
         <>
@@ -54,35 +56,42 @@ export const Sidebar = () => {
                             <MdPlaylistPlay color='white' size='1.5rem' className='nav-icon'/>
                             <span className="links_name">Playlists</span>
                         </Link>
-                        <Link to="/login" >
-                            <MdOutlineLogin color='white' size='1.5rem' className='nav-icon'/>
-                            <span className="links_name">Login</span>
-                        </Link>
-                        <Link to="/signup" >
-                            <MdOutlineLabelImportant color='white' size='1.5rem' className='nav-icon'/>
-                            <span className="links_name">SignUp</span>
-                        </Link>
-                       
+                        {encodedToken? '' :
+                            <>
+                            <Link to="/login" >
+                                <MdOutlineLogin color='white' size='1.5rem' className='nav-icon'/>
+                                <span className="links_name">Login</span>
+                            </Link>
+                            <Link to="/signup" >
+                                <MdOutlineLabelImportant color='white' size='1.5rem' className='nav-icon'/>
+                                <span className="links_name">SignUp</span>
+                            </Link>
+                            </>
+                        }
                     </li>
                 </ul>
 
-                <div className="profile_content">
-                    <div className="profile">
-                        <Image className="avatar xs"
-                                src="https://image.freepik.com/free-vector/businessman-character-avatar-isolated_24877-60111.jpg"
-                                alt="user"/>
-                        <p>karishma gajria</p>
+                {encodedToken ?
+                    <div className="profile_content">
+                        <div className="profile">
+                            <Image className="avatar xs"
+                                    src="https://image.freepik.com/free-vector/businessman-character-avatar-isolated_24877-60111.jpg"
+                                    alt="user"/>
+                            <p>{`${userData?.firstName? userData?.firstName : ''} ${userData?.lastName? userData?.lastName :''}`}</p>
+                        </div>
+                        {/* //clearLocalStorage() */}
+                        <button className='btn-logout' onClick={()=>{
+                                localStorage.clear()
+                                setAlertContent({_id: uuid(), isShow:true, type:'SUCCESS', content:"You heve been logged out successfully!"})
+                                navigate("/")
+    
+                            }}>
+                            <MdLogout color='white' size='2rem' id="log-out" />
+                        </button>                    
                     </div>
-                    {/* //clearLocalStorage() */}
-                    <button className='btn-logout' onClick={()=>{
-                            localStorage.clear()
-                            setAlertContent({_id: uuid(), isShow:true, type:'SUCCESS', content:"You heve been logged out successfully!"})
-                            navigate("/")
-
-                        }}>
-                        <MdLogout color='white' size='2rem' id="log-out" />
-                    </button>                    
-                </div>
+                    :''
+                }
+               
             </div>
         </>
     );

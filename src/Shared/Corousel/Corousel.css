@@ -7,6 +7,5 @@
 .slider-img img{
 	width: 100%;
 	height: 65vh;
-	background-color: var(--black-color);
-    object-fit: cover;
+    object-fit: contain;
 }

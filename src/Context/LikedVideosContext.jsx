@@ -2,7 +2,7 @@ import { createContext, useContext, useReducer, useState } from "react";
 import axios from "axios";
 import { useAlert } from "./AlertContext";
 import { v4 as uuid } from "uuid";
-import { actionAddToLikedVideosList } from "../Helpers/Services/actions";
+import { actionAddToLikedVideosList, actionRemoveFromLikedVideosList } from "../Helpers/Services/actions";
 
 
 //CONTEXT CREATED
@@ -14,42 +14,38 @@ const LikedVideosProvider = ({ children }) => {
     const [likedVideos , setLikedVideos] = useState([]);
     const {alertContent , setAlertContent} = useAlert();
 
-    const addToLikedVideos = async (video) => {
-        try {
-          const response = await axios.post(
-            "/user/likes",
-            { video },
-            {
-              headers: {
-                authorization: encodedToken,
-              },
-            }
-          );
-          if (response.status === 201) {
-            setLikedVideos(response.data.likes);
-            setAlertContent({_id: uuid(), isShow:true, type:'SUCCESS', content:"video added to liked video list"})
-          }
-        } catch (err) {
-          setAlertContent({_id: uuid(), isShow:true, type:'ERROR', content:"Unexpected error please try again later !!"})
-        }
-    };
+    const addToLikedVideos = async (videoObj) => {
+      actionAddToLikedVideosList({video:videoObj})
+      .then(res=> {
+          if(res.status === 201 || res.status === 200){
+            setAlertContent({_id: uuid(), isShow:true, type:'SUCCESS', content:"Video added successfully to Liked videos list!"})
+            setLikedVideos(res?.data?.likes);
+          }else if(res.status === 409){
+            setAlertContent({_id: uuid(), isShow:true, type:'ERROR', content:"The video is already in your liked videos list."})
+          }else{
+            setAlertContent({_id: uuid(), isShow:true, type:'ERROR', content:"Unexpected error.Please try again later."})
+          }            
+      })
+      .catch((error) => {
+          setAlertContent({_id: uuid(), isShow:true, type:'ERROR', content:"Unexpected error.Please try again later."})
+      })
+    }
 
-    const removeFromLikedVideos = async (id) => {
-      try {
-        const response = await axios.delete(`/user/likes/${id}`, {
-          headers: {
-            authorization: encodedToken,
-          },
-        });
-        if (response.status === 200) {
-          setLikedVideos(response.data.likes);
-          setAlertContent({_id: uuid(), isShow:true, type:'ERROR', content:"Video removed from Liked video list"})
-        }
-      } catch (err) {
-        setAlertContent({_id: uuid(), isShow:true, type:'ERROR', content:"Unexpeted error occoured. Please try again later !!"})
-      }
-    };
-
+     //API - actionToDeleteVideoFromHistory
+     const removeFromLikedVideos = ( videoId) =>{
+      actionRemoveFromLikedVideosList({ videoId})
+    .then(res=> {
+        if(res.status === 201 || res.status === 200){
+          setLikedVideos(res?.data?.likes);
+          setAlertContent({_id: uuid(), isShow:true, type:'SUCCESS', content:"Video deleted successfully from Liked videos list!"})
+        }else{
+          setAlertContent({_id: uuid(), isShow:true, type:'ERROR', content:"Unexpected error.Please try again later."})
+        }            
+    })
+    .catch((error) => {
+      setAlertContent({_id: uuid(), isShow:true, type:'ERROR', content:"Unexpected error.Please try again later."})
+    })
+  }
 
       return (
         <LikedVideosContext.Provider  value={{

@@ -1,31 +1,5 @@
 import { v4 as uuid } from "uuid";
 
-/**
- * Category Database can be added here.
- * You can add category of your wish with different attributes
- * */
-
-// export const categories = [
-//   {
-//     _id: uuid(),
-//     categoryName: "Computer Programming",
-//     description:
-//       "Computer programming is the process of designing and building an executable computer program to accomplish a specific computing",
-//   },
-//   {
-//     _id: uuid(),
-//     categoryName: "Frontend Development",
-//     description:
-//       "Front-end web development, also known as client-side development is the practice of producing HTML, CSS and JavaScript for a website or Web Application",
-//   },
-//   {
-//     _id: uuid(),
-//     categoryName: "Backend Development",
-//     description:
-//       "Backend Development is also known as server-side development. It is everything that the users don't see and contains behind-the-scenes activities that occur when performing any action on a website.",
-//   },
-// ];
-
 export const categories = [
   {   
     _id: uuid(),
@@ -33,7 +7,7 @@ export const categories = [
     img:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQq29zM4sZ-T8wWl6usxGEUJ7WGgi76uCrsuA&usqp=CAU",
     title:"Healthcare Devices",
     description:"Lorem Ipsum is simply dummy text of the printing and typesetting industry. one",
-
+    gif:"https://media.freestylediabetesme.com/wp-content/uploads/2018/08/25164609/gif4.gif",
     subcategory:[
         "BP monitors",
         "Weighing Scales",
@@ -54,6 +28,7 @@ export const categories = [
     _id: uuid(),
     id:2,
     img:"https://www.choosetolivebetter.com/sites/default/files/eating-drinking-final_0.png",
+    gif:"https://static.onecms.io/wp-content/uploads/sites/23/2021/04/19/Climatarian_header_resize2.gif",
     title:"Healthy Food and Drinks",
     description:"Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
     subcategory:["Weight Gain", "Weight Loss", "Immunity booker", "Eat this not that", "healthy breakfast" , "healthy breakfast for Diabeties", "Diet Tips", "Food for perfectly toned body" ]
@@ -62,6 +37,7 @@ export const categories = [
     _id: uuid(),
     id:3,
     img:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8MESVejz1iRQmGH6c6GPlyXWVIvW7JZYBGw&usqp=CAU",
+    gif:"https://c.tenor.com/Gn9WhBOs5xYAAAAM/self-care-feels.gif",
     title:"Personal Care",
     description:"Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
     subcategory:["Skin care", 
@@ -78,6 +54,7 @@ export const categories = [
     id:4,
     img:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTV1szF8AlO1frM0h0ccv_P8Gz6qcu_ZSUwtw&usqp=CAU",
     title:"Ayurveda",
+    gif:"https://www.urbanveda.com/gb/wp-content/uploads/2016/10/UV-Ayurveda-Vata-1.gif",
     description:"Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
     subcategory:["Ayurveda basics",
                 "Ayurveda tips",
@@ -95,6 +72,7 @@ export const categories = [
 {   _id: uuid(),
     img:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ65XbvKpRNM3EGa5eD-fJZ0g1SuX-vB1UZAw&usqp=CAU",
     title:"Pregnancy",
+    gif:"https://media2.giphy.com/media/eFxk9dx0aJ4lH4uzeM/200.gif",
     description:"Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
     subcategory: ["Pregnancy symptoms",
                     "Pregnancy do's",
@@ -108,6 +86,7 @@ export const categories = [
     _id: uuid(),
     id:5,
     img:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZMwm6TBBFCUDrNGVwVYwkF-unbjvf4RgAbw&usqp=CAU",
+    gif:"https://media4.giphy.com/media/OZnlVgVSg73ldkXFAg/giphy.gif",
     title:"Skin Care",
     description:"Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
     subcategory:[ "Dryness",
@@ -130,6 +109,7 @@ export const categories = [
     id:6,
     img:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFYoE82xIpzqwAcxdajyBPDq3mJeLSAU4JFg&usqp=CAU",
     title:"Diabetes",
+    gif:"https://progotirbangla.com/wp-content/uploads/2020/09/diabetes.gif",
     description:"Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
     subcategory:["Diabetes symptoms",
         "type-1 Diabetes",
@@ -149,6 +129,7 @@ export const categories = [
     id:7,
     img:"https://preview.pixlr.com/images/800wm/1503/1/1503120701.jpg",
     title:"Health Condition",
+    gif:"https://www.verywellhealth.com/thmb/Wc0vB_GZ3r5EXzCXDYln2vp6GqY=/800x450/filters:fill(87E3EF,1)/Anim_Orthopedics-96dcd00c83e14d39ab973d1a2c223f4e.gif",
     description:"Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
     subcategory: ["Cancer",
         "Cholesterol",
@@ -167,6 +148,7 @@ export const categories = [
 {   _id: uuid(),
     img:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1jzzTKtx1E-gr2g4ci-qHkforVpf8kc-Ogw&usqp=CAU",
     title:"Fitness",
+    gif:"https://media1.popsugar-assets.com/files/thumbor/XJJEB1cIhAyU5K9tzgJidhvzxVM/fit-in/2048xorig/filters:format_auto-!!-:strip_icc-!!-/2017/04/13/738/n/1922729/87033ecd04363271_standingab.gif",
     description:"Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
     subcategory:["Cardio",
                 "Aerobics",
@@ -180,8 +162,9 @@ export const categories = [
 {   
     _id: uuid(),
     id:9,
-    img:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNJH3TDSrSNaG9kAaH24CgbmUbjUejeWh_fw&usqp=CAU",
+    img:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTkp5hibB-7dUPC_WjVNx_dDIcDy1UyAuCUTg&usqp=CAU",
     title:"Yoga",
+    gif:"https://i.makeagif.com/media/6-20-2016/Bv6JpG.gif",
     description:"Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
     subcategory: ["pregnancy and yoga",
         "yoga for Bp control",
@@ -194,21 +177,102 @@ export const categories = [
 },
 {   
     _id: uuid(),
-    id:10,
-    img:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNT3ozmvVdMCtsL8kgt-1vSjukFvJ8xHID7w&usqp=CAU",
-    title:"Healthcare management careers",
+    id:11,
+    img:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQL7l8Nq5-mRzo-0uSkGpr2D1b7D3mWY8xdzQ&usqp=CAU",
+    title:"Obesity",
+    gif:"https://www.medylife.com/blog/wp-content/uploads/2017/10/Obesity-GIF.gif",
+    categoryStatus:"top",
+    categoryIcon:"https://healthicons.org/icons/svg/outline/conditions/overweight.svg",
     description:"Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
     brandfilters:["Bactigras Dressing","Ent dressings","NRS HealthCare"],
-    productTags:["Physician and Surgeon",
-        "Dentist",
-        "Podiatrist",
-        "Pharmacist",
-        "Nurse Practitioner",
-        "Optometrist",
-        "Physician Assistant",
-        "Veterinarian",
-        "Physical Therapist",
-        "Occupational Therapist"
+    productTags:["Obesity symptoms",
+        "Obesity treatment",
+        "Obesity and diabetes",
+        "Obesity causes",
+      ]
+  },
+  {   
+    _id: uuid(),
+    id:12,
+    img:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUD-4d0bUWkWC_dmvvez-LscgNs54X1Kuh1IQVIrcUcmMblxqath22X6j60lQy4XoODU4&usqp=CAU",
+    title:"Covid-19",
+    gif:"https://healthmatters.nyp.org/wp-content/uploads/2021/01/Vaccine-Facts-2_thumbnail-GIF.gif",
+    categoryStatus:"top",
+    categoryIcon:"https://img.icons8.com/external-flatart-icons-flat-flatarticons/50/000000/external-medical-mask-coronavirus-covid19-flatart-icons-flat-flatarticons.png",
+    description:"Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+    brandfilters:["Bactigras Dressing","Ent dressings","NRS HealthCare"],
+    productTags:["Covid-19 symptoms",
+        "Covid-19 sideeffects",
+        "Covid-19 vaccines",
+      ]
+  },
+  {   
+    _id: uuid(),
+    id:13,
+    img:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQV2c8BMnEMuEKwhQtjdopnM88qMlm_BkNDrQ&usqp=CAU",
+    title:"Elderly",
+    gif:"https://pro2-bar-s3-cdn-cf1.myportfolio.com/93bea8ef802a988ed8ab44889dc82b83/c4fb2bc4-9f30-4899-afee-d8ea5eeca43b_rw_1200.gif?h=725162a6e84eb9419ea4c08f456f04c2",
+    categoryStatus:"top",
+    categoryIcon:"https://healthicons.org/icons/svg/filled/conditions/back_pain.svg",
+    description:"Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+    brandfilters:["Bactigras Dressing","Ent dressings","NRS HealthCare"],
+    productTags:["Elderly care",
+        "Elderly Care products",
+      ]
+  },
+  {   
+    _id: uuid(),
+    id:14,
+    img:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvkJMn9twUy7V_4cxZWOsAKnVyhsL6OEpGAg&usqp=CAU",
+    title:"Woman",
+    gif:"https://www.countdown2030europe.org/storage/app/media/uploaded-files/GIF2.gif",
+    categoryStatus:"top",
+    categoryIcon:"https://img.icons8.com/external-photo3ideastudio-flat-photo3ideastudio/50/000000/external-medical-mask-covid19-prevention-photo3ideastudio-flat-photo3ideastudio.png",
+    description:"Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+    brandfilters:["Bactigras Dressing","Ent dressings","NRS HealthCare"],
+    productTags:["Women and Heart Disease",
+        "Breast Cancer",
+        "Ovarian and Cervical Cancer",
+        "Gynecological Health",
+        "Pregnancy Issues",
+        "Autoimmune Diseases",
+        "Depression and Anxiety"
+      ]
+  },
+  {   
+    _id: uuid(),
+    id:15,
+    img:"https://cdn.cdnparenting.com/articles/2018/04/1066815683-H.webp",
+    title:"NewBorn",
+    gif:"https://i.gifer.com/6yKa.gif",
+    categoryStatus:"top",
+    categoryIcon:"https://img.icons8.com/external-vitaliy-gorbachev-lineal-color-vitaly-gorbachev/50/000000/external-baby-baby-vitaliy-gorbachev-lineal-color-vitaly-gorbachev-2.png",
+    description:"Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+    brandfilters:["Bactigras Dressing","Ent dressings","NRS HealthCare"],
+    productTags:["NewBorn healthcare issues",
+        "Birth Injuries",
+        "Jaundice",
+        "Colic",
+        "Abdominal Distension",
+        "Vomiting",
+        "Depression and Anxiety"
+      ]
+  },
+  {   
+    _id: uuid(),
+    id:16,
+    img:"https://2rdnmg1qbg403gumla1v9i2h-wpengine.netdna-ssl.com/wp-content/uploads/sites/3/2020/01/mildHeartAttack-866257238-770x553-650x428.jpg",
+    title:"Heart",
+    gif:"https://www.sgu.edu/blog/medical/wp-content/uploads/sites/2/2018/02/What-Is-Heart-Disease_-Cardiovascular-Health-Problems-Explained.gif",
+    categoryStatus:"top",
+    categoryIcon:"https://img.icons8.com/offices/50/000000/medical-heart.png",
+    description:"Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+    brandfilters:["Bactigras Dressing","Ent dressings","NRS HealthCare"],
+    productTags:["Heart diseases",
+        "Heart diseases and stroke",
+        "Heart diseases and diabetes",
+        "Heart diseases and bp",
+        "Heart diseases and covid 19",
       ]
   }
 ]

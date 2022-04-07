@@ -21,10 +21,6 @@ const DashboardLayout = () =>{
         }, 3000);
         return () => clearTimeout(timer);
       }, [alertContent]);
-
-    // useEffect(()=> 
-    //   console.log("encodedToken ayayayyyyyyyyyyyyyyyyyy re", encodedToken)
-    // , [encodedToken])
     
 
     return(

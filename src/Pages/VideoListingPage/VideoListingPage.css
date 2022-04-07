@@ -42,3 +42,7 @@
     border: 1px solid var(--primary-bg);
     color: var(--primary-bg);
 }
+
+.empty{
+    color: var(--darkred-color);
+}

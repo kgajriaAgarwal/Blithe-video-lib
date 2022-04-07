@@ -14,7 +14,7 @@ const HistoryProvider = ({ children }) => {
     const [historyVideos , sethistoryVideos] = useState([]);
     const {alertContent , setAlertContent} = useAlert();
 
-    //API - actionAddVideoToPlaylist
+    //API - actionAddVideoToHistory
     const addVideoToHistory = (videoObj) =>{
         actionAddVideoToHistory({video:videoObj})
       .then(res=> {
@@ -31,12 +31,12 @@ const HistoryProvider = ({ children }) => {
       })
   }
 
-    //API - actionToDeleteVideoFromWatchlist
+    //API - actionToDeleteVideoFromHistory
     const removeVideoFromHistory= ( videoId) =>{
         actionToDeleteVideoFromHistory({ videoId})
       .then(res=> {
           if(res.status === 201 || res.status === 200){
-                sethistoryVideos(res?.data?.history);
+              sethistoryVideos(res?.data?.history);
               setAlertContent({_id: uuid(), isShow:true, type:'SUCCESS', content:"Video deleted successfully from history!"})
           }else{
               setAlertContent({_id: uuid(), isShow:true, type:'ERROR', content:"Unexpected error.Please try again later."})

@@ -544,5 +544,10 @@ export const offers = [
     }
 ]
 
+export const corouselImages = [
+    "https://www.b2w.tv/hubfs/Healthcare.gif",
+    "https://intelligencepharma.files.wordpress.com/2018/09/01.gif"
+]
+
 
 

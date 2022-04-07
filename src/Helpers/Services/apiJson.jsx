@@ -2,24 +2,33 @@ import { useAuthContext } from "../../Context";
 
 const encodedToken = localStorage.getItem("authData") ? localStorage.getItem("authData") : '';
 
-
-// export const getEncodedToken = () => {
-//   debugger
-//   const { effectTrigger, encoded_Token } = useAuthContext();
-//   console.log("effecttrigger, encoded_Token", effectTrigger , encoded_Token);
-//   // if(effectTrigger){
-
-//   // }
-// }
-
 export const ApiJson = { 
 
-  login: {
-    url: '/auth/login',
+//ACTION TO LOGIN
+login: {
+  url: '/auth/login',
+  method: 'POST',
+  data: {
+    "email": "",
+    "password": "",
+  },
+  headers: {
+    'Content-Type': 'application/json'
+  }, 
+  showResultMessage: false,
+  showErrorMessage: true,
+  },
+
+  //ACTION TO SIGN UP
+  signup: {
+    url: '/auth/signup',
     method: 'POST',
     data: {
-      "email": "",
-      "password": "",
+      "email":'',
+      "firstName":'',
+      "lastName":'',
+      "password":'',
+      "confirmPassword":''
     },
     headers: {
       'Content-Type': 'application/json'
@@ -28,51 +37,9 @@ export const ApiJson = {
     showErrorMessage: true,
     },
 
-    signup: {
-      url: '/auth/signup',
-      method: 'POST',
-      data: {
-        "email":'',
-        "firstName":'',
-        "lastName":'',
-        "password":'',
-        "confirmPassword":''
-      },
-      headers: {
-        'Content-Type': 'application/json'
-      }, 
-      showResultMessage: false,
-      showErrorMessage: true,
-      },
-
-    getAllCategory: {
-        url: '/categories',
-        method: 'GET',
-        data: {},
-        headers: {
-          'Accept': '*/*',
-          'Content-Type': 'application/json',
-          
-        }, 
-        showResultMessage: false,
-        showErrorMessage: false,
-    },
-
-    //getCategoryById
-    getCategoryById:{
-      url: '/categories/:categoryId',
-      method: 'GET',
-      data: {},
-      headers: {
-        'Accept': '*/*',
-        'Content-Type': 'application/json',        
-      }, 
-      showResultMessage: false,
-      showErrorMessage: false,
-    },
-
-    getVideos: {
-      url: '/videos',
+  //ACTION TO GET ALL CATEGORY
+  getAllCategory: {
+      url: '/categories',
       method: 'GET',
       data: {},
       headers: {
@@ -84,6 +51,33 @@ export const ApiJson = {
       showErrorMessage: false,
   },
 
+  //ACTION TO GET CATEGORY BY ID
+  getCategoryById:{
+    url: '/categories/:categoryId',
+    method: 'GET',
+    data: {},
+    headers: {
+      'Accept': '*/*',
+      'Content-Type': 'application/json',        
+    }, 
+    showResultMessage: false,
+    showErrorMessage: false,
+  },
+
+  //ACTION TO GET VIDEOS
+  getVideos: {
+    url: '/videos',
+    method: 'GET',
+    data: {},
+    headers: {
+      'Accept': '*/*',
+      'Content-Type': 'application/json',        
+    }, 
+    showResultMessage: false,
+    showErrorMessage: false,
+  },
+
+  //ACTION TO GET VIDEO BY ID
   getVideoById:{
     url: '/video/:videoId',
     method: 'GET',
@@ -96,6 +90,9 @@ export const ApiJson = {
     showErrorMessage: false,
   },
 
+  //LIKE / DISLIKE 
+
+  //ACTION TO GET LIKED VIDEOS
   getLikedVideos: {
     url: '/user/likes',
     method: 'GET',
@@ -109,10 +106,13 @@ export const ApiJson = {
     showErrorMessage: false,
   },
 
+  //ACTION TO ADD A PARTICULAR VIDEO TO LIKED LIST
   actionAddToLikedVideosList:{
     url: '/user/likes',
       method: 'POST',
-      data: {},
+      data: {
+        video:{}
+      },
       headers: {
         'Content-Type': 'application/json',
         'authorization': encodedToken
@@ -120,6 +120,21 @@ export const ApiJson = {
       showResultMessage: false,
       showErrorMessage: true,
   },
+
+    //ACTION TO DELETE VIDEO FROM LIKED LIST
+    actionRemoveFromLikedVideosList:{
+      url: 'user/likes/:videoId',
+        method: 'DELETE',
+        data: {},
+        headers: {
+          'Content-Type': 'application/json',
+          'authorization': encodedToken
+        }, 
+        showResultMessage: false,
+        showErrorMessage: true,
+    },
+
+
 
   //Playlist Routes -- api
   getplaylists: {
@@ -278,6 +293,19 @@ export const ApiJson = {
     },
 
     //action To Delete Video From hISTORY
+    actionToDeleteVideoFromHistory:{
+      url: 'user/history/:videoId',
+      method: 'DELETE',
+      data: {},
+      headers: {
+        'Content-Type': 'application/json',
+        'authorization': encodedToken
+      }, 
+      showResultMessage: false,
+      showErrorMessage: true,
+    },
+
+    //action to clear all history
     actionToClearAllHistory:{
       url: '/user/history/all',
         method: 'DELETE',

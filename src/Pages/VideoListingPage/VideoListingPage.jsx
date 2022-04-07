@@ -21,7 +21,9 @@ const VideoListingPage = () =>{
             if(res.status === 200){
                 setData(res.data.category);
             }else{
-                setAlertContent({_id: uuid(), isShow:true, type:'ERROR', content:"Unexpected error.Please try again later."})
+                if(categoryId !== ":categoryId"){
+                    setAlertContent({_id: uuid(), isShow:true, type:'ERROR', content:"Unexpected error.Please try again later."})
+                }
             }            
         })
         .catch((error) => {
@@ -39,7 +41,7 @@ const VideoListingPage = () =>{
                 const sel_ctgry = response.data.categories.find(ctgry => ctgry._id === categoryId);
                 setSelectedCategory(sel_ctgry?.title);
               } else if (str === "getVideos") {
-                setVideoData(response.data.videos);
+                setVideoData(response?.data?.videos);
               }
             } else{
                 setAlertContent({_id: uuid(), isShow:true, type:'ERROR', content:"Unexpected error.Please try again later."})
@@ -88,13 +90,15 @@ const VideoListingPage = () =>{
                 {/* //filter DATA ACC TO CATEEGORY */}
                 { videoData && videoData.length?
                     selectedCategory?
-                        videoData.filter(el => el.category === selectedCategory).map((cVal,cIndx)=>
-                        <VideoCard key={cIndx} video_data={cVal} module="VideosListingPage"/>
-                        )
+                        videoData.filter(el => el.category === selectedCategory).length?
+                            videoData.filter(el => el.category === selectedCategory).map((cVal,cIndx)=>
+                            <VideoCard key={cIndx} video_data={cVal} module="VideosListingPage"/>
+                            )
+                            :<p className='text-lg empty' >No Videos available !!</p>
                     :videoData.map((cVal,cIndx)=>
                     <VideoCard key={cIndx} video_data={cVal} module="VideosListingPage"/>
                     )
-                :''}        
+                :'No videos available'}        
             </div>
         </>
     );

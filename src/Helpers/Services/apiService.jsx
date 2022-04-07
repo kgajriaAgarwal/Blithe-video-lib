@@ -20,7 +20,6 @@ axios.defaults.baseURL = "/api";
 axios.interceptors.request.use(
   function (config) {
     let userInfo = getLocalStorage('authData');
-    console.log("userInfo:", userInfo);
     if (userInfo) {
       if (userInfo.access_token) {
         let access_token = userInfo.access_token;
